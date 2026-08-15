@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ranux-pro": "latest",
+    "ranux-cloud": "latest",
     "dotenv": "^16.4.7"
   },
   "engines": {
