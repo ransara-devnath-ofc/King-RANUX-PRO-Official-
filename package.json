@@ -1,11 +1,19 @@
 {
-  "name": "king-ranux-user",
-  "version": "1.0.0",
+  "name": "king-ranux-bot",
+  "version": "5.0.0",
+  "description": "Public Loader for King RANUX PRO v5.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "simple-git": "^3.30.0"
-  }
+    "ranux-cloud": "latest",
+    "dotenv": "^16.4.7"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "author": "MR. Ransara Devnath",
+  "license": "ISC"
 }

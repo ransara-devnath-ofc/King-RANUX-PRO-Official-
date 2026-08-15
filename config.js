@@ -1,73 +1,21 @@
-/**
- * 👑 King RANUX PRO – User Configuration
- * Users are allowed to edit ONLY this file
- */
+// --- START OF FILE config.js ---
 
-module.exports = {
+import dotenv from 'dotenv';
+dotenv.config();
 
-  // 🔐 WhatsApp Session ID
-  // (MEGA file id or base64 session)
-  SESSION_ID: process.env.SESSION_ID || "Paste Your Session ID",
+export default {
+    // 🔑 Session ID එක මෙතන දාන්න (Ex: "Ranux-Pro~xxxx")
+    // (නැත්නම් මේක හිස්ව තියලා Heroku/Koyeb Environment Variables වලින් දාන්නත් පුළුවන්)
+    SESSION_ID: process.env.SESSION_ID || "",
 
-  // ===============================
-  // 🤖 BOT MODE SYSTEM
-  // public  = groups + inbox
-  // group   = groups only
-  // inbox   = inbox only
-  // private = owner + sudo only
-  // ===============================
-  MODE: process.env.MODE || "public",
+    // ⚙️ Bot ගේ Prefix එක (Ex: "." , "!" , "#")
+    PREFIX: process.env.PREFIX || ".",
 
-  // ===============================
-  // 📌 STATUS AUTOMATION
-  // ===============================
-  AUTO_STATUS_SEEN: true,
-  AUTO_STATUS_REACT: false,
-  AUTO_STATUS_FORWARD: false,
+    // 🛡️ Bot ගේ Work Mode එක ("public", "private", "inbox", "group")
+    MODE: process.env.MODE || "public",
 
-  // ===============================
-  // 🛡️ ANTI DELETE
-  // ===============================
-  ANTI_DELETE: true,
-
-  // ===============================
-  // ⚙️ GENERAL
-  // ===============================
-  PREFIX: process.env.PREFIX || ".",
-
-  // ===============================
-  // 🎬 MOVIE PLUGIN FOOTER
-  // ===============================
-  MOVIE_FOOTER_TEXT: "𝓜𝓡. 𝓡𝓪𝓷𝓼𝓪𝓻𝓪 𝓓𝓮𝓿𝓷𝓪𝓽𝓱",
-
-  // ===============================
-  // 🖼️ ALIVE UI
-  // ===============================
-  ALIVE_IMG:
-    process.env.ALIVE_IMG ||
-    "https://raw.githubusercontent.com/ransara-devnath-ofc/-Bot-Accent-/refs/heads/main/King%20RANUX%20PRO%20Bot%20Images/king-ranux-pro-main-logo.png",
-
-  ALIVE_MSG: `
-👑 𝐊𝐢𝐧𝐠 𝐑𝐀𝐍𝐔𝐗 ᴾʳᵒ
-━━━━━━━━━━━━━━━━━━━━━━
-🟢 BOT STATUS : ONLINE & ACTIVE ✨
-
-⚡ Fast • Stable • Powerful
-🧩 Advanced Plugin-Based WhatsApp Bot
-🚀 Built for performance, reliability & automation
-
-━━━━━━━━━━━━━━━━━━━━━━
-📊 LIVE SYSTEM STATS
-
-🕒 Time      : {TIME}
-⏱️ Uptime    : {UPTIME}
-💾 RAM Usage : {RAM}
-
-━━━━━━━━━━━━━━━━━━━━━━
-📡 Connection: WhatsApp Multi-Device
-⚙️ Mode      : {MODE}
-
-━━━━━━━━━━━━━━━━━━━━━━
-> 𝓜𝓡. 𝓡𝓪𝓷𝓼𝓪𝓻𝓪 𝓓𝓮𝓿𝓷𝓪𝓽𝓱
-`
+    // 👤 ඔයාගේ Phone Number එක '+' නැතුව දාන්න (Ex: "94712345678")
+    BOT_OWNER: process.env.BOT_OWNER || ""
 };
+
+// --- END OF FILE config.js ---
